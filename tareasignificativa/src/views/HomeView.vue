@@ -1,17 +1,23 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar/>
+    <CyDComponent/>
+    <FooterComponent/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import FooterComponent from '@/components/FooterComponent.vue';
+import CyDComponent from '@/components/CyDComponent.vue'
+import NavBar from '@/components/NavBar.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    NavBar,
+    CyDComponent,
+    FooterComponent
   }
 }
 </script>

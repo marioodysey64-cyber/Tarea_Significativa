@@ -335,4 +335,38 @@ export default {
     right: 20px;
   }
 }
+/* --- Recursos Estudiantiles --- */
+.recursos-section {
+  margin-bottom: 25px;
+}
+
+.recursos-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.recursos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recursos-list li {
+  margin-bottom: 6px;
+}
+
+.recursos-list a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.recursos-list a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 </style>

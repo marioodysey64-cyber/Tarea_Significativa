@@ -16,13 +16,13 @@
 
       <!-- Controles del carrusel -->
       <button class="carousel-btn prev" @click="prevSlide" aria-label="Anterior">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="15 18 9 12 15 6"></polyline>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6" />
         </svg>
       </button>
       <button class="carousel-btn next" @click="nextSlide" aria-label="Siguiente">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="9 18 15 12 9 6"></polyline>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
         </svg>
       </button>
 
@@ -33,409 +33,143 @@
           :key="index"
           @click="goToSlide(index)"
           :class="{ active: currentSlide === index }"
-          :aria-label="`Ir a slide ${index + 1}`"
         ></button>
       </div>
     </div>
 
-    <!-- Sección de bienvenida -->
-    <section class="welcome-section">
-      <div class="welcome-content">
-        <h2>Bienvenido al Portal del ISSS</h2>
-        <p>Instituto Salvadoreño del Seguro Social - Comprometidos con tu salud y bienestar</p>
+    <!-- 🔻 NUEVA SECCIÓN (basada en tu código de React, convertida a Vue) -->
+    <div class="min-h-screen bg-gray-50">
+      <!-- Barra de anuncios superior -->
+      <div class="bg-red-700 text-white py-3 overflow-hidden">
+        <div class="animate-scroll whitespace-nowrap">
+          <span class="inline-block px-8">
+            YA FORMANDO A MÁS DE MIL MUJERES ELECTRICISTAS EN EL SALVADOR, CON ITCA-FEPADE COMO INSTITUCIÓN FORMADORA
+          </span>
+          <span class="inline-block px-8">
+            LANZAMOS EL PROGRAMA DE EFICIENCIA Y AHORRO ENERGÉTICO
+          </span>
+          <span class="inline-block px-8">
+            YA FORMANDO A MÁS DE MIL MUJERES ELECTRICISTAS EN EL SALVADOR, CON ITCA-FEPADE COMO INSTITUCIÓN FORMADORA
+          </span>
+        </div>
       </div>
-    </section>
 
-   
-    <!-- Sección de información -->
-    <section class="info-section">
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>Horarios de Atención</h3>
-          <p>Lunes a Viernes: 7:00 AM - 3:30 PM</p>
-          <p>Sábados: 7:00 AM - 12:00 PM</p>
-        </div>
-        <div class="info-card">
-          <h3>Contacto</h3>
-          <p>📞 2591-3000</p>
-          <p>✉️ atencionalusuario@isss.gob.sv</p>
-        </div>
-        <div class="info-card">
-          <h3>Ubicación</h3>
-          <p>Alameda Juan Pablo II y 39 Avenida Norte</p>
-          <p>San Salvador, El Salvador</p>
+      <!-- Contenido principal -->
+      <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Tarjeta Carreras Profesionales -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="grid grid-cols-3 gap-1 p-1">
+              <div class="col-span-2 row-span-2">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=600&fit=crop" alt="Estudiantes" class="w-full h-full object-cover" />
+              </div>
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=300&h=300&fit=crop" alt="Estudiante 1" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=300&fit=crop" alt="Estudiante 2" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300&h=300&fit=crop" alt="Estudiante 3" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1581092918484-8313e1f7e8c7?w=300&h=300&fit=crop" alt="Estudiante 4" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-8 text-center">
+              <h2 class="text-3xl font-bold text-gray-800 mb-3">Carreras Profesionales:</h2>
+              <p class="text-gray-600 mb-6">Ingenierías y Técnicos.</p>
+              <button class="bg-red-700 hover:bg-red-800 text-white font-semibold px-8 py-3 rounded transition-colors duration-300">
+                Ver más
+              </button>
+            </div>
+          </div>
+
+          <!-- Tarjeta Cursos y Diplomados -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="grid grid-cols-3 gap-1 p-1">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=300&h=300&fit=crop" alt="Gastronomía" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=300&fit=crop" alt="Diseño" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop" alt="Electricidad" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=300&h=300&fit=crop" alt="Idiomas" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=300&h=300&fit=crop" alt="Ingeniería" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=300&fit=crop" alt="Programación" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-8 text-center">
+              <h2 class="text-3xl font-bold text-gray-800 mb-3">Cursos y Diplomados:</h2>
+              <p class="text-gray-600 mb-6">Amplía tus conocimientos con nuestros programas cortos.</p>
+              <button class="bg-red-700 hover:bg-red-800 text-white font-semibold px-8 py-3 rounded transition-colors duration-300">
+                Ver más
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- 🔺 Fin de la nueva sección -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'InicioView',
+  name: "InicioView",
   data() {
     return {
       currentSlide: 0,
       autoplayInterval: null,
       slides: [
         {
-          image: 'https://media.discordapp.net/attachments/854835059764363276/1430942717017329705/image.png?ex=68fb9cc1&is=68fa4b41&hm=479f9850a7ccbd389ac533dd7d407001b0242e2702179e40f9594fece7e590df&=&format=webp&quality=lossless&width=1253&height=465',
-          title: 'CONVIVENCIA',
-          description: 'Brindamos atención médica de calidad para ti y tu familia'
+          image: "https://media.discordapp.net/attachments/854835059764363276/1430942717017329705/image.png",
+          title: "CONVIVENCIA",
+          description: "Brindamos atención médica de calidad para ti y tu familia",
         },
         {
-          image: 'https://media.discordapp.net/attachments/854835059764363276/1430942921489911869/image.png?ex=68fb9cf2&is=68fa4b72&hm=9553e0cf33650f8fe7eb119b0a6bbcdd58cae8153b187ee4a7608e1076f28be7&=&format=webp&quality=lossless&width=1318&height=368',
-          title: 'Servicios Médicos Especializados',
-          description: 'Contamos con profesionales altamente capacitados'
+          image: "https://media.discordapp.net/attachments/854835059764363276/1430942921489911869/image.png",
+          title: "Servicios Médicos Especializados",
+          description: "Contamos con profesionales altamente capacitados",
         },
         {
-          image: 'https://media.discordapp.net/attachments/854835059764363276/1430942158252278000/image.png?ex=68fb9c3c&is=68fa4abc&hm=589861324f8aca7789a344de677875e44aa896de06c00b3bf625987a2d45d480&=&format=webp&quality=lossless&width=1198&height=465',
-          title: 'Tecnología de Vanguardia',
-          description: 'Equipos médicos de última generación para tu atención'
+          image: "https://media.discordapp.net/attachments/854835059764363276/1430942158252278000/image.png",
+          title: "Tecnología de Vanguardia",
+          description: "Equipos médicos de última generación para tu atención",
         },
-        {
-          image: 'https://media1.tenor.com/m/uSDXgF3E6SUAAAAd/hollow-knight-dance-hollow-knight.gif',
-          
-        }
-      ]
-    }
+      ],
+    };
   },
   mounted() {
-    this.startAutoplay()
+    this.startAutoplay();
   },
   beforeUnmount() {
-    this.stopAutoplay()
+    this.stopAutoplay();
   },
   methods: {
     nextSlide() {
-      this.currentSlide = (this.currentSlide + 1) % this.slides.length
-      this.resetAutoplay()
+      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+      this.resetAutoplay();
     },
     prevSlide() {
-      this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1
-      this.resetAutoplay()
+      this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+      this.resetAutoplay();
     },
     goToSlide(index) {
-      this.currentSlide = index
-      this.resetAutoplay()
+      this.currentSlide = index;
+      this.resetAutoplay();
     },
     startAutoplay() {
       this.autoplayInterval = setInterval(() => {
-        this.nextSlide()
-      }, 5000)
+        this.nextSlide();
+      }, 5000);
     },
     stopAutoplay() {
-      if (this.autoplayInterval) {
-        clearInterval(this.autoplayInterval)
-      }
+      clearInterval(this.autoplayInterval);
     },
     resetAutoplay() {
-      this.stopAutoplay()
-      this.startAutoplay()
-    }
-  }
-}
+      this.stopAutoplay();
+      this.startAutoplay();
+    },
+  },
+};
 </script>
 
 <style scoped>
-.inicio {
-  min-height: calc(100vh - 80px);
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
-
-/* Carrusel */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
+.animate-scroll {
+  animation: scroll 20s linear infinite;
 }
-
-.carousel {
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 95, 143, 0.7));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 40px;
-}
-
-.carousel-overlay h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  animation: slideInDown 0.8s ease;
-}
-
-.carousel-overlay p {
-  font-size: 24px;
-  max-width: 800px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  animation: slideInUp 0.8s ease;
-}
-
-/* Botones del carrusel */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.3);
-  color: white;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
-
-.carousel-btn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-btn.prev {
-  left: 20px;
-}
-
-.carousel-btn.next {
-  right: 20px;
-}
-
-/* Indicadores */
-.carousel-indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.carousel-indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.carousel-indicators button.active {
-  background-color: white;
-  transform: scale(1.2);
-}
-
-/* Transiciones */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-
-/* Sección de bienvenida */
-.welcome-section {
-  padding: 60px 40px;
-  background: linear-gradient(135deg, #005f8f 0%, #0c7db5 100%);
-  color: white;
-  text-align: center;
-}
-
-.welcome-content h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.welcome-content p {
-  font-size: 18px;
-  opacity: 0.95;
-}
-
-/* Sección de servicios */
-.services-section {
-  padding: 80px 40px;
-  background-color: #f5f5f5;
-}
-
-.services-section h2 {
-  text-align: center;
-  font-size: 36px;
-  color: #005f8f;
-  margin-bottom: 50px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(0, 95, 143, 0.2);
-}
-
-.service-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #005f8f 0%, #0c7db5 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.service-icon svg {
-  stroke: white;
-}
-
-.service-card h3 {
-  font-size: 22px;
-  color: #005f8f;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  font-size: 15px;
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Sección de información */
-.info-section {
-  padding: 80px 40px;
-  background-color: white;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.info-card {
-  background: linear-gradient(135deg, #005f8f 0%, #0c7db5 100%);
-  color: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.info-card h3 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.info-card p {
-  font-size: 15px;
-  margin: 10px 0;
-  opacity: 0.95;
-}
-
-/* Animaciones */
-@keyframes slideInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .carousel-container {
-    height: 350px;
-  }
-
-  .carousel-overlay h1 {
-    font-size: 32px;
-  }
-
-  .carousel-overlay p {
-    font-size: 18px;
-  }
-
-  .welcome-content h2 {
-    font-size: 28px;
-  }
-
-  .services-section h2 {
-    font-size: 28px;
-  }
-
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
-  }
-
-  .carousel-btn svg {
-    width: 24px;
-    height: 24px;
-  }
-}
+/* Deja aquí tus estilos previos del carrusel y secciones */
 </style>

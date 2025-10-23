@@ -69,6 +69,38 @@
           </div>
         </div>
 
+        <div class="footer-column footer-links">
+  
+          <!-- Recursos Estudiantiles -->
+          <div class="recursos-section">
+            <h3>Recursos Estudiantiles</h3>
+            <ul class="recursos-list">
+              <li><a href="https://moodle.itca.edu.sv" target="_blank">Plataforma Moodle</a></li>
+              <li><a href="https://biblioteca.itca.edu.sv" target="_blank">Biblioteca Virtual</a></li>
+              <li><a href="https://correo.itca.edu.sv" target="_blank">Correo Institucional</a></li>
+              <li><a href="https://itca.edu.sv/calendario" target="_blank">Calendario Académico</a></li>
+            </ul>
+          </div>
+
+          <!-- Sección existente de redes sociales -->
+          <div class="social-section">
+            <h3>Únete a nuestra comunidad</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Facebook">…</a>
+              <a href="#" class="social-icon" aria-label="Twitter">…</a>
+              <a href="#" class="social-icon" aria-label="YouTube">…</a>
+            </div>
+          </div>
+
+          <!-- Navegación inferior -->
+          <nav class="footer-nav">
+            <router-link to="/mapa">Mapa del Sitio</router-link>
+            <router-link to="/politica">Política Web</router-link>
+            <router-link to="/preguntas">Preguntas Frecuentes</router-link>
+            <router-link to="/carta">Carta de Derecho</router-link>
+          </nav>
+        </div>
+
         <nav class="footer-nav">
           <router-link to="/mapa">Mapa del Sitio</router-link>
           <router-link to="/politica">Política Web</router-link>

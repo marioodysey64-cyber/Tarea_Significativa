@@ -74,6 +74,7 @@
 
 <script>
 export default {
+<<<<<<< HEAD
   name: 'InicioView',
   data() {
     return {
@@ -137,6 +138,11 @@ export default {
     startAutoplay() { this.autoplayInterval = setInterval(() => this.nextSlide(), 5000); },
     stopAutoplay() { if (this.autoplayInterval) clearInterval(this.autoplayInterval); },
     resetAutoplay() { this.stopAutoplay(); this.startAutoplay(); }
+=======
+  name: 'HomeView',
+  components: {
+    HelloWorld,
+>>>>>>> 438efb4f1740a8984dd6db7dc5986d6992d3c644
   }
 }
 </script>

@@ -55,7 +55,6 @@
 
     <!-- Contenedor principal de tarjetas -->
     <div class="cards-container max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
-      <!-- Tarjetas dinámicas desde data -->
       <div v-for="(card, index) in cards" :key="index" class="card bg-white rounded-lg shadow-lg overflow-hidden">
         <div class="card-images grid grid-cols-3 gap-1 p-1">
           <div v-for="(img, i) in card.images" :key="i" :class="img.class">
@@ -73,9 +72,13 @@
 </template>
 
 <script>
+import CursosComponent from '@/components/CursosComponent.vue';
+
 export default {
-<<<<<<< HEAD
-  name: 'InicioView',
+  name: 'HomeView',
+  components: {
+    CursosComponent
+  },
   data() {
     return {
       currentSlide: 0,
@@ -127,24 +130,39 @@ export default {
           ]
         }
       ]
-    }
+    };
   },
-  mounted() { this.startAutoplay() },
-  beforeUnmount() { this.stopAutoplay() },
+  mounted() {
+    this.startAutoplay();
+  },
+  beforeUnmount() {
+    this.stopAutoplay();
+  },
   methods: {
-    nextSlide() { this.currentSlide = (this.currentSlide + 1) % this.slides.length; this.resetAutoplay(); },
-    prevSlide() { this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1; this.resetAutoplay(); },
-    goToSlide(index) { this.currentSlide = index; this.resetAutoplay(); },
-    startAutoplay() { this.autoplayInterval = setInterval(() => this.nextSlide(), 5000); },
-    stopAutoplay() { if (this.autoplayInterval) clearInterval(this.autoplayInterval); },
-    resetAutoplay() { this.stopAutoplay(); this.startAutoplay(); }
-=======
-  name: 'HomeView',
-  components: {
-    HelloWorld,
->>>>>>> 438efb4f1740a8984dd6db7dc5986d6992d3c644
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+      this.resetAutoplay();
+    },
+    prevSlide() {
+      this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+      this.resetAutoplay();
+    },
+    goToSlide(index) {
+      this.currentSlide = index;
+      this.resetAutoplay();
+    },
+    startAutoplay() {
+      this.autoplayInterval = setInterval(() => this.nextSlide(), 5000);
+    },
+    stopAutoplay() {
+      if (this.autoplayInterval) clearInterval(this.autoplayInterval);
+    },
+    resetAutoplay() {
+      this.stopAutoplay();
+      this.startAutoplay();
+    }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -162,7 +180,7 @@ export default {
 .carousel-overlay h1 { font-size:48px; margin-bottom:20px; text-shadow:2px 2px 8px rgba(0,0,0,0.5); animation:slideInDown 0.8s ease; }
 .carousel-overlay p { font-size:24px; max-width:800px; text-shadow:1px 1px 4px rgba(0,0,0,0.5); animation:slideInUp 0.8s ease; }
 
-/* Botones y indicadores */
+/* Botones e indicadores */
 .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background-color: rgba(255,255,255,0.3); color:white; border:none; width:50px; height:50px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:10; transition:all 0.3s ease; }
 .carousel-btn:hover { background-color: rgba(255,255,255,0.5); transform:translateY(-50%) scale(1.1); }
 .carousel-btn.prev { left:20px; }
